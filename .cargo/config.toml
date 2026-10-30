@@ -1,0 +1,11 @@
+# Cross-building for the tablet from an x86_64 laptop. musl is preferred: the
+# result is one static binary with no glibc version to match against the image.
+#
+#   rustup target add aarch64-unknown-linux-musl
+#   cargo build --release --target aarch64-unknown-linux-musl
+#
+# rustc supplies musl's crt objects and libc itself (self-contained linking), so
+# clang only has to drive ld.lld; no aarch64 sysroot is needed.
+[target.aarch64-unknown-linux-musl]
+linker = "clang"
+rustflags = ["-C", "link-arg=--target=aarch64-unknown-linux-musl", "-C", "link-arg=-fuse-ld=lld", "-C", "link-arg=-Wno-unused-command-line-argument"]

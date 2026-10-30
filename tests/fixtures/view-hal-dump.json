@@ -1,0 +1,550 @@
+{
+  "buttons": {
+    "error": null,
+    "power_key_fitted": false,
+    "updated_ms": 1792349620953,
+    "volume_down": false,
+    "volume_down_device": "/dev/input/event2",
+    "volume_up": false,
+    "volume_up_device": "/dev/input/event0"
+  },
+  "display": {
+    "backlight": "/sys/class/backlight/backlight",
+    "blanked_until": null,
+    "brightness": 2000,
+    "brightness_floor": 1400,
+    "brightness_max": 4095,
+    "connector": "card0-DSI-1",
+    "dpms": "On",
+    "error": null,
+    "height": 1280,
+    "power": "on",
+    "refresh_hz": 60,
+    "status": "connected",
+    "updated_ms": 1792349620671,
+    "width": 800
+  },
+  "inventory": {
+    "checks": [
+      {
+        "detail": "card0-DSI-1 800x1280",
+        "id": "panel",
+        "label": "DSI panel",
+        "module": "display",
+        "ok": true
+      },
+      {
+        "detail": "0..4095",
+        "id": "backlight",
+        "label": "WLED backlight",
+        "module": "display",
+        "ok": true
+      },
+      {
+        "detail": "/sys/bus/iio/devices/iio:device0",
+        "id": "accelerometer",
+        "label": "BMA253 accelerometer",
+        "module": "orientation",
+        "ok": true
+      },
+      {
+        "detail": "gpio-keys SW_CAMERA_LENS_COVER",
+        "id": "lens-cover",
+        "label": "Camera lens cover",
+        "module": "switches",
+        "ok": true
+      },
+      {
+        "detail": "gpio-keys GPIO 85",
+        "id": "volume-up",
+        "label": "Volume Up",
+        "module": "buttons",
+        "ok": true
+      },
+      {
+        "detail": "pm8941_resin",
+        "id": "volume-down",
+        "label": "Volume Down",
+        "module": "buttons",
+        "ok": true
+      },
+      {
+        "detail": "tsv",
+        "id": "usb-gadget",
+        "label": "USB gadget",
+        "module": "usb",
+        "ok": true
+      },
+      {
+        "detail": "10 zones",
+        "id": "thermal",
+        "label": "Thermal zones",
+        "module": "thermal",
+        "ok": true
+      },
+      {
+        "detail": "",
+        "id": "cpufreq",
+        "label": "CPU frequency scaling",
+        "module": "thermal",
+        "ok": true
+      },
+      {
+        "detail": "generic ft5x06 (09)",
+        "id": "touch",
+        "label": "Touch controller",
+        "module": "",
+        "ok": true
+      }
+    ],
+    "cpu": {
+      "core": "Cortex-A53",
+      "cores": 8,
+      "features": [
+        "fp",
+        "asimd",
+        "evtstrm",
+        "aes",
+        "pmull",
+        "sha1",
+        "sha2",
+        "crc32",
+        "cpuid"
+      ],
+      "has_asimd": true,
+      "has_dotprod": false,
+      "has_fp16": false,
+      "implementer": "0x41",
+      "part": "0xd03",
+      "revision": 4
+    },
+    "iio": [
+      {
+        "device": "iio:device0",
+        "name": "bma253"
+      },
+      {
+        "device": "iio:device1",
+        "name": "200f000.spmi:pmic@0:adc@3100"
+      },
+      {
+        "device": "iio:device2",
+        "name": "200f000.spmi:pmic@2:adc@3100"
+      },
+      {
+        "device": "trigger0",
+        "name": "bma253-dev0"
+      },
+      {
+        "device": "trigger1",
+        "name": "bma253-any-motion-dev0"
+      }
+    ],
+    "input": [
+      {
+        "keys": [
+          115
+        ],
+        "name": "gpio-keys",
+        "node": "/dev/input/event0",
+        "switches": [
+          4,
+          9
+        ]
+      },
+      {
+        "keys": [
+          330
+        ],
+        "name": "generic ft5x06 (09)",
+        "node": "/dev/input/event1",
+        "switches": []
+      },
+      {
+        "keys": [
+          114
+        ],
+        "name": "pm8941_resin",
+        "node": "/dev/input/event2",
+        "switches": []
+      }
+    ],
+    "panel": {
+      "connector": "card0-DSI-1",
+      "dpms": "On",
+      "height": 1280,
+      "internal": true,
+      "powered": true,
+      "status": "connected",
+      "width": 800
+    },
+    "soc": {
+      "family": "Snapdragon",
+      "machine": "APQ8053",
+      "revision": "1.1",
+      "soc_id": 304
+    },
+    "system": {
+      "compatible": [
+        "lenovo,cd-18781y",
+        "qcom,apq8053",
+        "qcom,msm8953"
+      ],
+      "hostname": "thinksmart",
+      "kernel": "7.3.0-g755ffc44d5d8-dirty",
+      "mem_gb": 1.9,
+      "mem_kb": 1988088,
+      "model": "Lenovo ThinkView Smart",
+      "os": "Arch Linux ARM",
+      "uptime_s": 266
+    }
+  },
+  "orientation": {
+    "angle_deg": 1.7236571378567438,
+    "error": null,
+    "flat": false,
+    "gravity_ms2": 9.988494210221079,
+    "in_plane_ms2": 9.551861169708433,
+    "last_read_us": 2162,
+    "mount_matrix": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "path": "/sys/bus/iio/devices/iio:device0",
+    "raw": [
+      15,
+      -498,
+      154
+    ],
+    "reads": 5,
+    "scale": 0.019154,
+    "updated_ms": 1792349620851,
+    "upright": "portrait",
+    "x_ms2": 0.28731,
+    "y_ms2": -9.538692000000001,
+    "z_ms2": 2.949716
+  },
+  "switches": {
+    "device": "/dev/input/event0",
+    "error": null,
+    "lens_covered": false,
+    "mic_mute_fitted": false,
+    "mic_mute_note": "not fitted on this unit: GPIO 86 is advertised by gpio-keys but no switch is connected, and the cover does not mute the microphones",
+    "updated_ms": 1792349620909
+  },
+  "thermal": {
+    "cpus": [
+      {
+        "cpu": 0,
+        "cur_mhz": 1612.8,
+        "online": true
+      },
+      {
+        "cpu": 1,
+        "cur_mhz": 1612.8,
+        "online": true
+      },
+      {
+        "cpu": 2,
+        "cur_mhz": 1612.8,
+        "online": true
+      },
+      {
+        "cpu": 3,
+        "cur_mhz": 1612.8,
+        "online": true
+      },
+      {
+        "cpu": 4,
+        "cur_mhz": 1612.8,
+        "online": true
+      },
+      {
+        "cpu": 5,
+        "cur_mhz": 1612.8,
+        "online": true
+      },
+      {
+        "cpu": 6,
+        "cur_mhz": 1612.8,
+        "online": true
+      },
+      {
+        "cpu": 7,
+        "cur_mhz": 1612.8,
+        "online": true
+      }
+    ],
+    "error": null,
+    "max_temp_mdegc": 51100,
+    "policies": [
+      {
+        "available_mhz": [
+          652.8,
+          844.8,
+          1036.8,
+          1228.8,
+          1420.8,
+          1612.8,
+          1804.8
+        ],
+        "cpus": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "cur_mhz": 1612.8,
+        "driver": "cpufreq-dt",
+        "governor": "schedutil",
+        "hw_max_mhz": 1804.8,
+        "hw_min_mhz": 652.8,
+        "max_mhz": 1612.8,
+        "min_mhz": 652.8,
+        "policy": "policy0"
+      }
+    ],
+    "updated_ms": 1792349620954,
+    "zones": [
+      {
+        "enabled": true,
+        "temp_mdegc": 49500,
+        "trips": [
+          {
+            "temp_mdegc": 56000,
+            "type": "passive"
+          },
+          {
+            "temp_mdegc": 100000,
+            "type": "critical"
+          },
+          {
+            "temp_mdegc": 50000,
+            "type": "passive"
+          }
+        ],
+        "type": "cpu4-thermal",
+        "zone": "thermal_zone0"
+      },
+      {
+        "enabled": true,
+        "temp_mdegc": 48900,
+        "trips": [
+          {
+            "temp_mdegc": 56000,
+            "type": "passive"
+          },
+          {
+            "temp_mdegc": 100000,
+            "type": "critical"
+          },
+          {
+            "temp_mdegc": 50000,
+            "type": "passive"
+          }
+        ],
+        "type": "cpu5-thermal",
+        "zone": "thermal_zone1"
+      },
+      {
+        "enabled": true,
+        "temp_mdegc": 50800,
+        "trips": [
+          {
+            "temp_mdegc": 56000,
+            "type": "passive"
+          },
+          {
+            "temp_mdegc": 100000,
+            "type": "critical"
+          },
+          {
+            "temp_mdegc": 50000,
+            "type": "passive"
+          }
+        ],
+        "type": "cpu6-thermal",
+        "zone": "thermal_zone2"
+      },
+      {
+        "enabled": true,
+        "temp_mdegc": 51100,
+        "trips": [
+          {
+            "temp_mdegc": 56000,
+            "type": "passive"
+          },
+          {
+            "temp_mdegc": 100000,
+            "type": "critical"
+          },
+          {
+            "temp_mdegc": 50000,
+            "type": "passive"
+          }
+        ],
+        "type": "cpu7-thermal",
+        "zone": "thermal_zone3"
+      },
+      {
+        "enabled": true,
+        "temp_mdegc": 47600,
+        "trips": [
+          {
+            "temp_mdegc": 56000,
+            "type": "passive"
+          },
+          {
+            "temp_mdegc": 100000,
+            "type": "critical"
+          },
+          {
+            "temp_mdegc": 50000,
+            "type": "passive"
+          }
+        ],
+        "type": "cpu0-thermal",
+        "zone": "thermal_zone4"
+      },
+      {
+        "enabled": true,
+        "temp_mdegc": 49200,
+        "trips": [
+          {
+            "temp_mdegc": 56000,
+            "type": "passive"
+          },
+          {
+            "temp_mdegc": 100000,
+            "type": "critical"
+          },
+          {
+            "temp_mdegc": 50000,
+            "type": "passive"
+          }
+        ],
+        "type": "cpu1-thermal",
+        "zone": "thermal_zone5"
+      },
+      {
+        "enabled": true,
+        "temp_mdegc": 48900,
+        "trips": [
+          {
+            "temp_mdegc": 56000,
+            "type": "passive"
+          },
+          {
+            "temp_mdegc": 100000,
+            "type": "critical"
+          },
+          {
+            "temp_mdegc": 50000,
+            "type": "passive"
+          }
+        ],
+        "type": "cpu2-thermal",
+        "zone": "thermal_zone6"
+      },
+      {
+        "enabled": true,
+        "temp_mdegc": 51100,
+        "trips": [
+          {
+            "temp_mdegc": 56000,
+            "type": "passive"
+          },
+          {
+            "temp_mdegc": 100000,
+            "type": "critical"
+          },
+          {
+            "temp_mdegc": 50000,
+            "type": "passive"
+          }
+        ],
+        "type": "cpu3-thermal",
+        "zone": "thermal_zone7"
+      },
+      {
+        "enabled": true,
+        "temp_mdegc": 41000,
+        "trips": [
+          {
+            "temp_mdegc": 70000,
+            "type": "passive"
+          },
+          {
+            "temp_mdegc": 90000,
+            "type": "critical"
+          },
+          {
+            "temp_mdegc": 80000,
+            "type": "passive"
+          }
+        ],
+        "type": "gpu-thermal",
+        "zone": "thermal_zone8"
+      },
+      {
+        "enabled": true,
+        "temp_mdegc": 36704,
+        "trips": [
+          {
+            "temp_mdegc": 105000,
+            "type": "passive"
+          },
+          {
+            "temp_mdegc": 125000,
+            "type": "hot"
+          },
+          {
+            "temp_mdegc": 145000,
+            "type": "critical"
+          }
+        ],
+        "type": "pm8953-thermal",
+        "zone": "thermal_zone9"
+      }
+    ]
+  },
+  "usb": {
+    "acm": true,
+    "adb": true,
+    "addresses": [
+      "172.16.42.1/24"
+    ],
+    "error": null,
+    "functions": [
+      "acm.GS0",
+      "ffs.adb",
+      "ncm.usb0"
+    ],
+    "gadget": "tsv",
+    "host_connected": true,
+    "id": "1d6b:0104",
+    "interface": "usb0",
+    "linked": [
+      "acm.GS0",
+      "ffs.adb",
+      "ncm.usb0"
+    ],
+    "ncm": true,
+    "operstate": "up",
+    "speed": "high-speed",
+    "udc": "7000000.usb",
+    "udc_state": "configured",
+    "updated_ms": 1792349620954
+  }
+}

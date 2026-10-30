@@ -1,0 +1,26 @@
+[package]
+name = "view-hal"
+version = "0.1.0"
+edition = "2021"
+description = "Hardware support for the Lenovo ThinkSmart View (CD-18781Y) on Arch Linux ARM"
+license = "MIT OR Apache-2.0"
+publish = false
+
+[dependencies]
+# evdev ioctls, getifaddrs and access(2). Every input device here is read with
+# plain read(2) and ioctl(2) on /dev/input/event*, so there is no libevdev and
+# nothing to cross-compile but this crate.
+libc = "0.2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[[bin]]
+name = "view-hal-dump"
+path = "src/bin/view-hal-dump.rs"
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+strip = true
+panic = "abort"

@@ -1,0 +1,35 @@
+.
+./bcdDevice
+./bcdUSB
+./bDeviceClass
+./bDeviceProtocol
+./bDeviceSubClass
+./bMaxPacketSize0
+./configs
+./configs/c.1
+./configs/c.1/acm.GS0
+./configs/c.1/bmAttributes
+./configs/c.1/ffs.adb
+./configs/c.1/MaxPower
+./configs/c.1/ncm.usb0
+./configs/c.1/strings
+./functions
+./functions/acm.GS0
+./functions/acm.GS0/port_num
+./functions/acm.GS0/protocol
+./functions/ffs.adb
+./functions/ffs.adb/ready
+./functions/ncm.usb0
+./functions/ncm.usb0/dev_addr
+./functions/ncm.usb0/host_addr
+./functions/ncm.usb0/ifname
+./functions/ncm.usb0/max_segment_size
+./functions/ncm.usb0/os_desc
+./functions/ncm.usb0/qmult
+./idProduct
+./idVendor
+./max_speed
+./UDC
+
+UDC=7000000.usb idVendor=0x1d6b idProduct=0x0104
+udc state=configured speed=high-speed
