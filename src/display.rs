@@ -31,8 +31,10 @@
 //!   `bl_power` 4 then 0 is accepted with no WLED fault interrupt, but
 //!   `actual_brightness` keeps reading the level throughout (the driver has no
 //!   `get_brightness`), so it cannot tell you the backlight is off; `power` is
-//!   read from `bl_power` for that reason. Whether 4 is fully dark has not been
-//!   checked by eye.
+//!   read from `bl_power` for that reason. 4 is fully dark: the WLED driver
+//!   then sees brightness 0 and clears the module enable bit (PMI8950 `0xd846`
+//!   goes from `0x80` to `0x00`, read through debugfs regmap), and DPMS stays
+//!   On. Back on takes one sysfs write, measured at 5.6 ms.
 //! * **Native orientation is portrait**, 800 wide by 1280 high. A compositor
 //!   running it in landscape gives a 1280x800 window, and [`Panel::covers`]
 //!   accepts either orientation.

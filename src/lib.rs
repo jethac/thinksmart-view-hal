@@ -14,6 +14,10 @@
 //! - [`orientation`] The BMA253 accelerometer as an angle in the screen plane and
 //!   a quadrant, with the idle screen's filter. Each read is about 1 ms of CPU on
 //!   a bit-banged bus.
+//! - [`light`] The VCNL4200: ambient light in lux, and proximity counts from
+//!   one IR LED burst per read (the project's kernel measures on demand; the
+//!   module refuses a driver that would leave the LED running).
+//! - [`touch`] Finger down and up on the touchscreen, for waking the screen.
 //! - [`switches`] The camera lens cover. There is no microphone mute switch on
 //!   this unit, and the cover does not mute anything.
 //! - [`buttons`] Volume Up and Volume Down, on two different input devices. No
@@ -35,8 +39,10 @@ pub mod buttons;
 pub mod display;
 pub mod evdev;
 pub mod inventory;
+pub mod light;
 pub mod orientation;
 pub mod switches;
 pub mod thermal;
+pub mod touch;
 pub mod usb;
 pub mod util;

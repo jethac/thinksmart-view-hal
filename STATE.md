@@ -54,6 +54,24 @@ the equivalent is `brightness.is_some()`.
 | `last_read_us` | `Option<u64>` | µs | wall time of the last three-axis read |
 | `reads` | `u64` | count | samples taken by this handle |
 
+## `light::State`
+
+| Field | Type | Unit / values | Meaning |
+| --- | --- | --- | --- |
+| `path` | `Option<String>` | path | IIO device directory (`vcnl4000`) |
+| `lux` | `Option<f64>` | lux | last light read: raw × `in_illuminance_scale` (0.012 at 100 ms) |
+| `als_raw` | `Option<u32>` | counts | last light read as the driver gave it |
+| `proximity` | `Option<u32>` | counts, 16-bit | last proximity read (one IR LED burst); `in_proximity_raw` × 16 |
+| `ps_pulses` | `Option<u32>` | count | pulses per measurement, as read back after `open` (1) |
+| `ps_led_ua` | `Option<u32>` | µA | LED_I as read back (50000); gate drive only on this board |
+| `ps_integration_us` | `Option<u32>` | µs | proximity integration time as read back (384, 4T) |
+| `on_demand` | `bool` | | the driver was seen to measure proximity only on a read |
+| `last_read_us` | `Option<u64>` | µs | wall time of the last read (about 25 ms for proximity) |
+| `reads` | `u64` | count | reads by this handle |
+
+`touch::Event`: `down` (`bool`, a finger landed on an empty screen; false when the last
+lifts) and `updated_ms`.
+
 ## `switches::State` and `switches::Event`
 
 | Field | Type | Unit / values | Meaning |
